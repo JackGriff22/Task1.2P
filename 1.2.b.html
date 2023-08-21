@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>Assignment 1.2P</h1>
+        <div>
+            <h2>Task 2.a: String Methods</h2>
+            <ol>
+                <li>
+                    <p>The Substring Method</p>
+                    <p>Original Text: "Welcome to JavaScript!"</p>
+                    <p>Substring of position 11 to 21:</p>
+                    <p id="sub"></p>
+                    <script>
+                        let subOrigTxt = "Welcome to JavaScript!";
+                        let substringTxt = subOrigTxt.substr(11,21);
+                        document.getElementById("sub").innerHTML = substringTxt;
+                    </script>
+                </li>
+                <li>
+                    <p>The toLowerCAse and toUpperCase Methods</p>
+                    <p>Text: "Hello JavaScript!"</p>
+                    <p>Lowercase:</p>
+                    <p id="lwrCase"></p>
+                    <p>Uppercase:</p>
+                    <p id="uprCase"></p>
+                    <script>
+                        let casingOrigTxt = "Hello JavaScript!";
+                        let lwrCaseTxt = casingOrigTxt.toLowerCase();
+                        let uprCaseTxt = casingOrigTxt.toUpperCase();
+                        document.getElementById("lwrCase").innerHTML = lwrCaseTxt;
+                        document.getElementById("uprCase").innerHTML = uprCaseTxt;
+                    </script>
+                </li>
+                <li>
+                    <p>ChatAt Method</p>
+                    <p>Text: "SIT224!""</p>
+                    <p id="charAt"></p>
+                    <script>
+                        let text = "SIT224!";
+                        let char = text.charAt(2);
+                        document.getElementById("charAt").innerHTML = "Character: " + char;
+                    </script>
+                </li>
+                <li>
+                    <p>Slice Method</p>
+                    <p id="origSlice"></p>
+                    <p id="slice"></p>
+                    <script>
+                        let origSlice = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                        let slicedArray = origSlice.slice(1,5);
+                        document.getElementById("origSlice").innerHTML = "Original Array: " + origSlice;
+                        document.getElementById("slice").innerHTML = "Sliced Months: "+ slicedArray;
+                    </script>
+                </li>
+                <li>
+                    <p>Replace Method</p>
+                    <p id="origRep"></p>
+                    <p id="replaced"></p>
+                    <script>
+                        let origReplace = "Hello, My Name is Javk!";
+                        let replacedTxt = origReplace.replace("Javk", "Jack")
+                        document.getElementById("origRep").innerHTML = "Original Text: " + origReplace;
+                        document.getElementById("replaced").innerHTML = "Replaced Text: " + replacedTxt;
+                    </script>
+                </li>
+            </ol>
+        </div>
+        <br>
+        <div>
+            <h2>Task 2.b: Number Methods</h2>
+            <ol>
+                <li>
+                    <p>toString Method</p>
+                    <p id="toString"></p>
+                    <script>
+                        let x = 1024;
+                        document.getElementById("toString").innerHTML = x.toString() + "<br>" + (987).toString() + "<br>" + (1000 + 24).toString();
+                    </script>
+                </li>
+                <li>
+                    <p>toExponential Method</p>
+                    <p id="exp"></p>
+                    <script>
+                        let y = 6.497;
+                        document.getElementById("exp").innerHTML = y.toExponential() + "<br>" + y.toExponential(2);
+                    </script>
+                </li>
+                <li>
+                    <p>toFixed Method</p>
+                    <p id="fixed"></p>
+                    <script>
+                        let z = 5.678;
+                        document.getElementById("fixed").innerHTML = z.toFixed() + "<br>" + z.toFixed(2);
+                    </script>
+                </li>
+                <li>
+                    <p>toPrecision Method</p>
+                    <p id="precision"></p>
+                    <script>
+                        let a = 2.458;
+                        document.getElementById("precision").innerHTML = a.toPrecision() + "<br>" + a.toPrecision(2);
+                    </script>
+                </li>
+                <li>
+                    <p>valueOf Method</p>
+                    <p id="valueOf"></p>
+                    <script>
+                        let b = 3598;
+                        document.getElementById("valueOf").innerHTML = b.valueOf() + "<br>" + (3000 + 598).valueOf();
+                    </script>
+                </li>
+            </ol>
+        </div>
+        <br>
+        <div>
+            <h2>Task 2.c: Array Methods</h2>
+            <ol>
+                <li>
+                    <p>Push Method</p>
+                    <p id="orig"></p>
+                    <p id="push"></p>
+                    <script>
+                        let pushOrig = ["Red","Green","Blue"];
+                        document.getElementById("orig").innerHTML = pushOrig;
+                        pushOrig.push("Yellow");
+                        document.getElementById("push").innerHTML = "After push(): "+ pushOrig;
+                    </script>
+                </li>
+                <li>
+                    <p>Pop Method</p>
+                    <p id="origPop"></p>
+                    <p id="pop"></p>
+                    <p id="poppedEl"></p>
+                    <script>
+                        let poppedOrig = ["Red","Green","Blue","Yellow"];
+                        document.getElementById("origPop").innerHTML = poppedOrig;
+                        let poppedEl = poppedOrig.pop("Yellow");
+                        document.getElementById("pop").innerHTML = "After pop(): "+ poppedOrig;
+                        document.getElementById("poppedEl").innerHTML = "Popped Element: "+ poppedEl;
+                    </script>
+                </li>
+                <li>
+                    <p>lastIndexOf Method</p>
+                    <p id="origArray"></p>
+                    <p id="findLast"></p>
+                    <script>
+                        let array1 = [20,35,2,60,45,5];
+                        let id = 45;
+                        let last = array1.lastIndexOf(id);
+                        document.getElementById("origArray").innerHTML = array1;
+                        document.getElementById("findLast").innerHTML = last;
+                    </script>
+                </li>
+                <li>
+                    <p>Unshift Method</p>
+                    <p id="arrayOrig"></p>
+                    <p id="arrayModified"></p>
+                    <p id="arrayUpdated"></p>
+                    <script>
+                        let array2 = ["Red","Green","Blue","Yellow"];
+                        document.getElementById("arrayOrig").innerHTML = array2;
+                        document.getElementById("arrayModified").innerHTML = array2.unshift("Orange");
+                        document.getElementById("arrayUpdated").innerHTML = array2;
+                    </script>
+                </li>
+                <li>
+                    <p>concat Method</p>
+                    <p id="firstArray"></p>
+                    <p id="secondArray"></p>
+                    <p id="thirdArray"></p>
+                    <p id="carArray"></p>
+                    <script>
+                        let firstArray = ["Merzedez","BMW","Ford"];
+                        document.getElementById("firstArray").innerHTML = firstArray;
+                        let secondArray = ["Holden","McLaren","Ferrari"];
+                        document.getElementById("secondArray").innerHTML = secondArray;
+                        let thirdArray = ["Tesla","Bugatti","Hyundai"];
+                        document.getElementById("thirdArray").innerHTML = thirdArray;
+
+                        let carArray = firstArray.concat(secondArray,thirdArray);
+                        document.getElementById("carArray").innerHTML = carArray;
+                    </script>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h2>Task 2.d: Date Methods</h2>
+            <ol>
+                <li>
+                    <p>getDate Method</p>
+                    <p id="getDate"></p>
+                    <script>
+                        const d = new Date();
+                        document.getElementById("getDate").innerHTML = d.getDate();
+                    </script>
+                </li>
+                <li>
+                    <p>getTime Method</p>
+                    <p id="getTime"></p>
+                    <script>
+                        const e = new Date("2023-08-20");
+                        document.getElementById("getTime").innerHTML = e.getTime();
+                    </script>
+                </li>
+                <li>
+                    <p>getFullYear Method</p>
+                    <p id="fullYear"></p>
+                    <script>
+                        const f = new Date();
+                        document.getElementById("fullYear").innerHTML = f.getFullYear();
+                    </script>
+                </li>
+                <li>
+                    <p>getMonth Method</p>
+                    <p id="getMonth"></p>
+                    <script>
+                        const g = new Date();
+                        document.getElementById("getMonth").innerHTML = g.getMonth() + 1;
+                    </script>
+                </li>
+                <li>
+                    <p>getHours Method</p>
+                    <p id="getHours"></p>
+                    <script>
+                        const h = new Date();
+                        document.getElementById("getHours").innerHTML = h.getHours();
+                    </script>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h2>Task 2.e: Function Methods</h2>
+            <ol>
+                <li>
+                    <p id="func1"></p>
+                    <script>
+                        function makeCarArray(arrayTemp) {
+                            let funcArray = [];
+                            for (let i = 0; i < arrayTemp.length; i++) { 
+                                funcArray += arrayTemp[i] + "<br>";
+                            }
+                            return funcArray;
+                        }
+                        document.getElementById("func1").innerHTML = "My array is after function called: " + "<br>" + makeCarArray(carArray);
+                    </script>
+                </li>
+                <li>
+                    <p id="func2"></p>
+                    <script>
+                        function toCelsius(temp) {
+                            return (5/9) * (temp - 32);
+                        }
+                        let userTemp = prompt("What is the temp in farenhiet?");
+                        document.getElementById("func2").innerHTML = "Your Farenhiet is converted to celsius: " + toCelsius(userTemp) + " Degrees Celsius";
+                    </script>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>
